@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<style>
+.content-text {
+    font-size: 16px;
+    color: #7a8b9a;
+
+    text-align: left!important;
+}
+.space {
+        line-height: 10px;
+}
+
+label{
+    clear: both;
+    display: inline-block;
+    text-align: right;
+  margin-right: 15px;
+}
+input {
+  display: inline-block;
+  float: right;
+  padding: 5px;
+    margin-right: 1150px;
+}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light font">
+
+<div class="content-text container-fluid font">
+  <ul class="nav">
+    <li class="nav-item">
+      <li><a class="nav-link" href="{{ url_for('plotdata') }}">Home</a></li>
+    </li>
+  </ul>
+</div>
+</nav>
+
+<div class="content-text container-fluid font">
+  <br>
+  <b>Please Enter Your Username And Password To Login</b>
+<br><br>
+<div>
+<form method="post">
+  {{form.hidden_tag()}}
+  <label>{{form.username.label}}</label>{{form.username()}}<br>
+  <label>{{form.Password.label}}</label>{{form.Password()}}<br>
+  <label>{{form.remember.label}}</label>{{form.remember()}}<br>
+  <br>
+  {{form.login()}}
+</form>
+</div>
+</div>
+{% endblock %}
+

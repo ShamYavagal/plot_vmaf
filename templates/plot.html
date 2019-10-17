@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+.content-text {
+    font-size: 16px;
+    color: #7a8b9a;
+
+    text-align: left!important;
+}
+.space {
+        line-height: 10px;
+}
+
+label{
+    clear: both;
+    display: inline-block;
+    text-align: right;
+  margin-right: 15px;
+}
+input {
+  display: inline-block;
+  float: right;
+  padding: 5px;
+    margin-right: 1100px;
+}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light font">
+
+<div class="content-text container-fluid font">
+  <ul class="nav">
+    <li class="nav-item">
+      <li><a class="nav-link" href="{{ url_for('list') }}">List Objects</a></li>
+    </li>
+  </ul>
+</div>
+</nav>
+
+<div class="content-text container-fluid font">
+  <br>
+  <b>Please Enter The Name Of The S3 Object/Directory From The 'vmaf-scores' S3 Bucket, Click On 'List Objects' To Get A Directory List And Copy From There.</b>
+<br><br>
+<div>
+<form method="post">
+  {{form.hidden_tag()}}
+  <label>{{form.Dir.label}}</label>{{form.Dir()}}<br>
+  <br>
+  {{form.submit()}}
+</form>
+</div>
+</div>
+{% endblock %}
