@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 #ShamYavagal
 
+#This Project has been closed!
+
 import json
 import logging
 import sys
