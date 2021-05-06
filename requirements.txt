@@ -2,7 +2,7 @@ boto3==1.9.175
 Flask==1.0.3
 Flask-API==1.1
 Flask-Compress==1.4.0
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 Flask-Login==0.4.1
 Flask-RESTful==0.3.7
 Flask-WTF==0.14.2
